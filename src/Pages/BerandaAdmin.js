@@ -9,7 +9,9 @@ class BerandaAdmin extends Component {
     open: false
   };
   render() {
-
+    if ((this.props.is_login === false || this.props.is_login === "") && this.props.location.pathname !== '/signin') {
+      return <Redirect to={{ pathname: "/signin" }} />;
+    }
 
     return (
       <div>
@@ -210,6 +212,6 @@ class BerandaAdmin extends Component {
 }
 
 export default connect(
-  "",
+  "is_login",
   actions
 )(BerandaAdmin);
