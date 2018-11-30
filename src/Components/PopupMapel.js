@@ -26,7 +26,7 @@ class PopupMapel extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/mapel";
+    const url = "https://sipss-api.online/admin/mapel";
     const data = {
       nama_mapel: this.state.nama_mapel
     };

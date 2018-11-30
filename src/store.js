@@ -59,7 +59,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/kelas-mapel/" + state.id_kelas;
+    const url = "https://sipss-api.online/kelas-mapel/" + state.id_kelas;
     await axios
       .get(url,{headers})
       .then(response => {
@@ -77,7 +77,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/kelas/"+state.id_tingkat;
+    const url = "https://sipss-api.online/kelas/"+state.id_tingkat;
     await axios
       .get(url,{headers})
       .then(response => {
@@ -95,7 +95,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/kelas-guru";
+    const url = "https://sipss-api.online/kelas-guru";
     await axios
       .get(url,{headers})
       .then(response => {
@@ -114,7 +114,7 @@ const actions = store => ({
         Authorization: "Bearer " + token
     };
     const url =
-      "http://13.251.97.170:5001/paket-kelas?id_kelas=" +
+      "https://sipss-api.online/paket-kelas?id_kelas=" +
       id_kelas +
       "&id_mapel=" +
       id_mapel;
@@ -135,7 +135,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/soal?id_paket_soal=" + id_paket_soal;
+    const url = "https://sipss-api.online/soal?id_paket_soal=" + id_paket_soal;
     await axios
       .get(url,{headers})
       .then(response => {
@@ -165,7 +165,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/soal?id_paket_soal=" + id_paket_soal;
+    const url = "https://sipss-api.online/soal?id_paket_soal=" + id_paket_soal;
     await axios
       .get(url,{headers})
       .then(response => {
@@ -184,7 +184,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/ujian";
+    const url = "https://sipss-api.online/ujian";
     const data = {
       id_kelas: state.id_kelas,
       kode_soal: state.kode_soal,
@@ -213,7 +213,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/dashboard";
+    const url = "https://sipss-api.online/dashboard";
     const data_kirim = {
       id_paket_soal: state.id_paket_soal,
       id_kelas: state.id_kelas
@@ -236,7 +236,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/dashboard?id_kelas="+state.id_kelas+"&id_paket_soal="+state.id_paket_soal;
+    const url = "https://sipss-api.online/dashboard?id_kelas="+state.id_kelas+"&id_paket_soal="+state.id_paket_soal;
     await axios
       .get(url, {headers})
       .then(response => {
@@ -254,7 +254,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/dashboard-table?id_kelas="+state.id_kelas+"&id_paket_soal="+state.id_paket_soal;
+    const url = "https://sipss-api.online/dashboard-table?id_kelas="+state.id_kelas+"&id_paket_soal="+state.id_paket_soal;
     await axios
       .get(url, {headers})
       .then(response => {
@@ -272,7 +272,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/mapel";
+    const url = "https://sipss-api.online/mapel";
     const data_kirim = {
       id_mapel: state.id_mapel,
       id_kelas: state.id_kelas
@@ -307,7 +307,7 @@ const actions = store => ({
   },
   signInHandle: async (state, username, password, login_as) => {
     const endpoint = login_as === "admin" ? "admin/login": "login"
-    const url = "http://13.251.97.170:5001/" + endpoint;
+    const url = "https://sipss-api.online/" + endpoint;
     const body = {
       username: username,
       password: password
@@ -364,7 +364,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/guru";
+    const url = "https://sipss-api.online/admin/guru";
     await axios
       .get(url,{headers})
       .then(response => {
@@ -382,7 +382,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/guru/"+id;
+    const url = "https://sipss-api.online/admin/guru/"+id;
     await axios
     .delete(url,{headers})
     .then(response => {
@@ -397,7 +397,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/siswa";
+    const url = "https://sipss-api.online/admin/siswa";
     await axios
       .get(url,{headers})
       .then(response => {
@@ -415,7 +415,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/siswa/"+id;
+    const url = "https://sipss-api.online/admin/siswa/"+id;
     await axios
     .delete(url,{headers})
     .then(response => {
@@ -430,7 +430,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/mapel";
+    const url = "https://sipss-api.online/admin/mapel";
     await axios
       .get(url,{headers})
       .then(response => {
@@ -448,7 +448,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/mapel/"+id;
+    const url = "https://sipss-api.online/admin/mapel/"+id;
     await axios
     .delete(url,{headers})
     .then(response => {
@@ -463,7 +463,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/kelas";
+    const url = "https://sipss-api.online/admin/kelas";
     await axios
       .get(url,{headers})
       .then(response => {
@@ -481,7 +481,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/guru";
+    const url = "https://sipss-api.online/admin/guru";
     const data = {
       nip: state.nip,
       nama: state.nama,
@@ -509,7 +509,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/kelasmapelconj";
+    const url = "https://sipss-api.online/admin/kelasmapelconj";
     await axios
       .get(url,{headers})
       .then(response => {
@@ -527,7 +527,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/rekap?id_mapel="+state.id_mapel+"&id_kelas="+state.id_kelas;
+    const url = "https://sipss-api.online/rekap?id_mapel="+state.id_mapel+"&id_kelas="+state.id_kelas;
     await axios
       .get(url, {headers})
       .then(response => {
@@ -562,7 +562,7 @@ const actions = store => ({
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/scoring-persen?id_mapel="+state.id_mapel+"&id_kelas="+state.id_kelas;
+    const url = "https://sipss-api.online/scoring-persen?id_mapel="+state.id_mapel+"&id_kelas="+state.id_kelas;
     await axios
       .get(url, {headers})
       .then(response => {

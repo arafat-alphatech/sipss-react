@@ -165,7 +165,7 @@ class HalamanEdit extends Component {
       // this.props.history.push('#')
       console.log(this.state);
     } else {
-      const url = "http://13.251.97.170:5001/soal";
+      const url = "https://sipss-api.online/soal";
       const data = {
         id_paket_soal: id_paket_soal,
         narasi: this.state.deskripsi_soal,

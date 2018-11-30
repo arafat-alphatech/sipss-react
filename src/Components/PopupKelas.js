@@ -24,7 +24,7 @@ class PopupKelas extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/kelas";
+    const url = "https://sipss-api.online/admin/kelas";
     const data = {
       id_tingkat: this.state.id_tingkat,
       nama_kelas: this.state.nama_kelas,

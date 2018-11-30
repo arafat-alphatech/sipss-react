@@ -28,7 +28,7 @@ class PopupEditGuru extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/guru/"+this.props.id;
+    const url = "https://sipss-api.online/admin/guru/"+this.props.id;
     const data = {
       nip: this.state.nip,
       nama: this.state.nama,
@@ -65,7 +65,7 @@ class PopupEditGuru extends React.Component {
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/guru-detail/" +  this.props.id;
+    const url = "https://sipss-api.online/admin/guru-detail/" +  this.props.id;
     axios
     .get(url,{headers})
     .then((response) => {

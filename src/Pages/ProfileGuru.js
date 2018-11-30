@@ -17,7 +17,7 @@ class Profile extends Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/profile";
+    const url = "https://sipss-api.online/profile";
     axios
       .get(url, { headers })
       .then((response) => {

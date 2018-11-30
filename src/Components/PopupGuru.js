@@ -28,7 +28,7 @@ class Popup extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/guru";
+    const url = "https://sipss-api.online/admin/guru";
     const data = {
       nip: this.state.nip,
       nama: this.state.nama,

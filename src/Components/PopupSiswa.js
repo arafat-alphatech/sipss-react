@@ -26,7 +26,7 @@ class PopupSiswa extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/siswa";
+    const url = "https://sipss-api.online/admin/siswa";
     const data = {
       id_kelas: this.state.id_kelas,
       nis: this.state.nis,

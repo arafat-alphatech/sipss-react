@@ -27,7 +27,7 @@ class PopupEditMapel extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/mapel/" +this.props.id;
+    const url = "https://sipss-api.online/admin/mapel/" +this.props.id;
     const data = {
       nama_mapel: this.state.nama_mapel
     };
@@ -51,7 +51,7 @@ class PopupEditMapel extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/mapel-detail/" + this.props.id;
+    const url = "https://sipss-api.online/admin/mapel-detail/" + this.props.id;
     axios
       .get(url, { headers })
       .then(response => {

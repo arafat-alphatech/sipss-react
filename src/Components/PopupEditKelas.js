@@ -24,7 +24,7 @@ class PopupEditKelas extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/kelas-detail/" +this.props.id;
+    const url = "https://sipss-api.online/admin/kelas-detail/" +this.props.id;
     const data = {
       nama_kelas: this.state.nama_kelas,
       wali_kelas: this.state.wali_kelas,
@@ -54,7 +54,7 @@ class PopupEditKelas extends React.Component {
     const headers = {
         Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/kelas-detail/" +  this.props.id;
+    const url = "https://sipss-api.online/admin/kelas-detail/" +  this.props.id;
     axios
     .get(url,{headers})
     .then((response) => {

@@ -24,7 +24,7 @@ class PopupMKCon extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/kelasmapelconj";
+    const url = "https://sipss-api.online/admin/kelasmapelconj";
     const data = {
       id_guru: this.state.id_guru,
       id_kelas: this.state.id_kelas,

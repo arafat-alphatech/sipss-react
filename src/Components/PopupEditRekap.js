@@ -28,7 +28,7 @@ class PopupEditRekap extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/scoring-persen";
+    const url = "https://sipss-api.online/scoring-persen";
     const data = {
       id_paket_soal: this.state.id_paket_soal,
       id_kelas: parseInt(this.state.id_kelas),
@@ -54,7 +54,7 @@ class PopupEditRekap extends React.Component {
     const headers = {
       Authorization: "Bearer " + token
     };
-    const url = "http://13.251.97.170:5001/admin/mapel-detail/" + this.props.id;
+    const url = "https://sipss-api.online/admin/mapel-detail/" + this.props.id;
     axios
       .get(url, { headers })
       .then(response => {
